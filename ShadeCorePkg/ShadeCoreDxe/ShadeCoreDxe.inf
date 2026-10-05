@@ -1,0 +1,39 @@
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = ShadeCoreDxe
+  FILE_GUID                      = b0e69632-2337-49c5-bd6c-d597569b07c6
+  #MODULE_TYPE                    = DXE_DRIVER
+  MODULE_TYPE                    = DXE_RUNTIME_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = DriverEntry
+
+[Sources]
+  ShadeCoreDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiLib
+  IoLib
+  PrintLib
+  BaseLib
+  BaseMemoryLib
+  UefiRuntimeServicesTableLib
+  UefiBootServicesTableLib
+  DevicePathLib
+
+[Guids]
+  gEfiEndOfDxeEventGroupGuid
+  gEfiMemoryAttributesTableGuid
+
+[Protocols]
+  gEfiCpuArchProtocolGuid              ## CONSUMES
+  gEfiTimerArchProtocolGuid            ## CONSUMES
+  gEfiAcpiSdtProtocolGuid              ## CONSUMES
+  gEfiAcpiTableProtocolGuid            ## CONSUMES
+
+[Depex]
+  TRUE

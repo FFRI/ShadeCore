@@ -1,0 +1,7 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = ShadeCorePkg
+  PACKAGE_GUID                   = 2cf6f2e4-be0f-479b-87f0-a8933e5d1225
+  PACKAGE_VERSION                = 0.1
+
+[Protocols]
